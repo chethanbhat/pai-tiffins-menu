@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: whitesmoke;
+}
+
+h2 {
+  text-align: center;
+}
+
+.main-menu {
+  border: 5px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.categories {
+  display: flex;
+  padding: 2.5%;
+}
+
+.category {
+  flex: 1;
+  margin: 0 5%;
+}
+
+.food-item {
+  background: palegoldenrod;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5% auto;
+  padding: 2.5%;
+  font-size: 1.2rem;
+}
+
+.food-item img {
+  height: 250px;
+  padding: 25px 25px;
+}
+
+.category h3 {
+  margin: 20px;
+}
+
+.menu-item p {
+  font-weight: bold;
+  text-align: left;
+}
+
+.menu-item {
+  display: flex;
+  flex: 3;
+  line-height: 0;
+  justify-content: space-around;
+}
+
+.my-slides {
+  display: none;
+}
+
+.Slides {
+  display: none;
+}
+
+.mySlides {
+  display: none;
+}
