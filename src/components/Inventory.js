@@ -21,9 +21,10 @@ class Inventory extends React.Component{
   addItem = (item) => {
     // Take a copy of existing state
     const items = {...this.state.items};
+    const keyNum = Object.keys(items).length;
 
     // Add new item to the items
-    items[`item${Date.now()}`] = item 
+    items[`item${keyNum}`] = item 
 
     // Set the new item object to state
     this.setState({
