@@ -15,8 +15,9 @@ const items = {
     },
     
     item3 : {
-        name: "Idli Vada",
+        name: "Idli Vada Sam",
         price: "Rs 35",
+        status: "available",
         cuisine: "South Indian",
         category: "Snacks"
     },

@@ -34,6 +34,27 @@ h2 {
   flex-wrap: wrap;
 }
 
+.food-item {
+  min-width: 300px;
+  background: palegoldenrod;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  padding: 1% !important;
+  font-size: 1.2rem;
+}
+
+.food-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.food-item img {
+  height: 250px;
+  padding: 25px 25px;
+}
+
 .inventory-form {
   padding: 5%;
   text-align: initial;
@@ -47,26 +68,6 @@ h2 {
 .category {
   flex: 1;
   margin: 0 2%;
-}
-
-.food-item {
-  background: palegoldenrod;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2% auto;
-  padding: 1% !important;
-  font-size: 1.2rem;
-}
-
-.food-item p {
-  margin: 0;
-  padding: 0;
-}
-
-.food-item img {
-  height: 250px;
-  padding: 25px 25px;
 }
 
 .category h3 {
