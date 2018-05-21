@@ -1,42 +1,48 @@
 import React from 'react';
 import '../App.css';
-// import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
 
 class AddItemForm extends React.Component{
-  nameRef = React.createRef();
-  statusRef = React.createRef();
+
   createItem = (event) => {
     event.preventDefault();
-    console.log(this.nameRef.value)
-  }  
+    
+    const { name, status, price, cuisine, category } = this.formRef;
+    const item = {
+      name: name.value,
+      price: price.value,
+      status: status.value, 
+      cuisine: cuisine.value,
+      category: category.value
+    }
+
+    this.props.addItem(item);
+    // Refresh the form
+    this.formRef.reset();
+  }
   render(){
         return (
-          <form onSubmit={this.createItem}>
-            <input type="text" name="name" ref={this.nameRef}/>
-            <button>Submit</button>
+          <form onSubmit={this.createItem} ref={(formRef) => {this.formRef = formRef}}>
+              <label>Name</label>
+              <input name="name" type="text" placeholder="Item Name" /> <br />
+              <label>Price</label>
+              <input name="price" type="text" placeholder="Item Name" /> <br />
+              <label>Cusine</label>
+              <br />
+              <input type="radio" name="cuisine" value="South Indian" defaultChecked /> South Indian 
+              <input type="radio" name="cuisine" value="North Indian" /> North Indian 
+              <input type="radio" name="cuisine" value="Chinese" /> Chinese 
+              <input type="radio" name="cuisine" value="Juice" /> Juice 
+              <input type="radio" name="cuisine" value="Deserts" /> Deserts
+              <br />
+              <label>Category</label>
+              <input type="text"  name="category"  placeholder="Dosas, Snacks, Breads, Soup etc" /> <br />
+              <label>Status</label>
+              <br />
+              <input type="radio" name="status" value="available" defaultChecked /> Available 
+              <input type="radio" name="status" value="unavailable" /> Unavailable 
+              <br />
+              <button>Submit</button>
           </form>
-          // <Form onSubmit={this.createItem}>
-          //   <FormGroup>
-          //     <Label for="itemName">Title</Label>
-          //     <Input name="name" ref={this.nameRef} id="itemName" type="text" placeholder="Item Name" />
-          //   </FormGroup>
-          //   <FormGroup tag="fieldset">
-          //     <FormGroup check> 
-          //     <Label check>
-          //       <Input type="radio" name="status" ref={this.statusRef} value="available" defaultChecked />{' '}
-          //       Available
-          //     </Label>
-          //   </FormGroup>
-          //   <FormGroup check>
-          //     <Label check>
-          //       <Input type="radio" name="status" ref={this.statusRef} value="unavailable" />{' '}
-          //       Unavailable
-          //     </Label>
-          //   </FormGroup>
-          //   </FormGroup>
-          //   <Button>Add Item</Button>
-          // </Form>
         )
     }
 }

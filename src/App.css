@@ -6,13 +6,19 @@
   box-sizing: border-box;
 }
 
-.App, .menu, .inventory {
+.App {
+  margin: 0;
+  padding: 1% 0;
+  background: whitesmoke;
+}
+
+.menu,
+.inventory {
   text-align: center;
   max-width: 100vw;
   max-height: 100vh;
   margin: 0;
   padding: 1% 0;
-  overflow: hidden;
   background: whitesmoke;
 }
 
@@ -28,7 +34,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-.inventory-form{
+.inventory-form {
   padding: 5%;
   text-align: initial;
 }

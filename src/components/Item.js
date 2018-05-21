@@ -7,8 +7,8 @@ class Item extends React.Component{
     render(){
         return (
         <div className="food-item" onClick={this.handleClick}>
-            <p>{this.props.item}</p>
-            <p>{this.props.price}</p>
+            <p>{this.props.details.name}</p>
+            <p>{this.props.details.price}</p>
         </div>
         )
     }
