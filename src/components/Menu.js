@@ -29,15 +29,12 @@ class Menu extends React.Component{
       })
   }
   componentDidMount(){
-    this.ref = base.syncState(`inventory`, {
-      context: this, 
-      state: 'items'
-    });
-    const syncItems = this.ref;
-    console.table(syncItems);
-    // this.setState({
-    //   items: syncItems
-    // })
+    base.listenTo('inventory', {
+      context: this,
+      then(data){
+        this.setState({items: data.items});
+      }
+    })
   }
   componentWillUnmount(){
     base.removeBinding(this.ref);
