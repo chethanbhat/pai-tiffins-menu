@@ -2,7 +2,7 @@ import React from 'react';
 
 class Cusine extends React.Component{
     render(){
-        return <h3>{this.props.title}</h3>
+        return <h2>{this.props.title} Dishes</h2>
     }
 }
 
