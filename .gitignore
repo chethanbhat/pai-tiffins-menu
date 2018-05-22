@@ -9,6 +9,12 @@
 # production
 /build
 
+# firebase
+/src/base.js
+
+# netlify
+/.netlify
+
 # misc
 .DS_Store
 .env.local
