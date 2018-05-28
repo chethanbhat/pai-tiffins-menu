@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import AddItemForm from './AddItemForm'
+import EditItemForm from './EditItemForm'
 import foodItems from '../items'
 import Item from './Item';
 import base from '../base'
@@ -40,21 +41,11 @@ class Inventory extends React.Component{
   render(){
       return (
         <div className="inventory">
-          <h1>Hello I'm Inventory !</h1>
-          <div className="inventory-form">
+          <h1>Food Inventory !</h1>
+          <div className="addItemForm">
           <AddItemForm addItem={this.addItem}/>
-          <button onClick={this.loadSampleItems}>Load Items</button>
+          {Object.keys(this.state.items).map(key => <EditItemForm key={key} details={this.state.items[key]} />)}
           </div>
-          <div className="menu">
-          <div className="main-menu">
-              {Object.keys(this.state.items).map(key => <Item key={key} details={this.state.items[key]} />)}
-            </div>
-            <div className="main-inventory">
-              {Object.keys(this.state.items).map(key => <Item key={key} details={this.state.items[key]} />)}
-            </div>
-          </div>
-
-
         </div>
       )
   }

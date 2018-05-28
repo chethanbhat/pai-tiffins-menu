@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-class AddItemForm extends React.Component{
+class EditItemForm extends React.Component{
 
   createItem = (event) => {
     event.preventDefault();
@@ -19,24 +19,34 @@ class AddItemForm extends React.Component{
     // Refresh the form
     this.formRef.reset();
   }
+  renderOption(cuisine){
+    let output = "";
+    const cuisineArr = ["South Indian","North Indian","Chinese","Juice","Desserts"]
+    cuisineArr.forEach(item => {
+        output+= `<option value="${item}">${item}</option>`
+    });
+    console.log(output);
+    return output;
+
+  }
   render(){
         return (
           <form className="item-form" onSubmit={this.createItem} ref={(formRef) => {this.formRef = formRef}}>
               <div class="form-group name ">
                   <label>Name :</label>
-                  <input name="name" type="text" placeholder="Name" />
+                  <input name="name" type="text" placeholder="Name" value={this.props.details.name} />
               </div>
               <div class="form-group price">
                   <label>Price (Rs) :</label>
-                  <input name="price" type="text" placeholder="20" />
+                  <input name="price" type="text" placeholder="20" value={this.props.details.price} />
              </div>
              <div class="form-group status">
                 <label>Status :</label>
                 <div class="radio-group">
-                        <input type="radio" name="option" id="radio1" checked="checked" />
+                        <input type="radio" name="option" id="radio1" checked={this.props.details.status === "available" ? "checked" : false} />
                         <label for="radio1">Available</label>
                         
-                        <input type="radio" name="option" id="radio2" />
+                        <input type="radio" name="option" id="radio2" checked={this.props.details.status === "unavailable" ? "checked" : false} />
                         <label for="radio2">Unavailable</label>
                 </div>
               </div>
@@ -44,11 +54,8 @@ class AddItemForm extends React.Component{
             <div class="form-group cuisine">
               <label>Cuisine :</label>
               <select id="cuisine">
-                <option value="South Indian" defaultChecked>South Indian</option>
-                <option value="North Indian">North Indian</option>
-                <option value="Chineese">Chineese</option>
-                <option value="Juice">Juice</option>
-                <option value="Desserts">Desserts</option>
+                <option value="South Indian">{this.props.details.cuisine}</option>
+                {this.renderOption()}
               </select>
             </div>
             <div class="form-group category">
@@ -66,4 +73,4 @@ class AddItemForm extends React.Component{
     }
 }
 
-export default AddItemForm; 
+export default EditItemForm; 

@@ -55,11 +55,6 @@ h2 {
   padding: 25px 25px;
 }
 
-.inventory-form {
-  padding: 5%;
-  text-align: initial;
-}
-
 .categories {
   display: flex;
   padding: 1% 2.5%;
@@ -96,4 +91,82 @@ h2 {
 
 .mySlides {
   display: none;
+}
+
+/* Inventory */
+
+.inventoryBtn {
+  width: 200px;
+  height: 40px;
+  margin: 5%;
+  padding: 0;
+  background-color: palegoldenrod;
+  border: 2px solid darkgoldenrod;
+  font-weight: bold;
+  line-height: 2;
+  border-radius: 25px;
+}
+
+/* AddItemForm */
+
+.item-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2.5%;
+  background-color: navajowhite;
+  border: 5px double black;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  padding: 1%;
+}
+
+.form-group>* {
+  /* border: 2px solid green; */
+  margin: 0;
+}
+
+label {
+  flex: 1;
+  font-weight: bold;
+}
+
+input,
+select {
+  flex: 5;
+  border: 2px solid #999;
+  padding: 1%;
+  border-radius: 1%;
+}
+
+.radio-group {
+  flex: 5;
+  padding: 1%;
+  border-radius: 1%;
+}
+
+.radio-group>label {
+  margin: 0 2.5%;
+}
+
+.btn-group {
+  margin: 0 auto;
+  display: flex;
+}
+
+.btn-group>button {
+  width: 100px;
+  height: 40px;
+  margin: 5%;
+  padding: 0;
+  background-color: palegoldenrod;
+  border: 2px solid darkgoldenrod;
+  font-weight: bold;
+  line-height: 2;
+  border-radius: 10px;
 }
