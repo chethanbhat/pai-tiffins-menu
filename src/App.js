@@ -1,29 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './components/Header'
+import Slider from './components/Slider'
 import Menu from './components/Menu';
-import Inventory from './components/Inventory';
 
 class App extends Component {
   state = {
-    items: {}
-  };
-  addItem = (item) => {
-    // Take a copy of existing state
-    const items = {...this.state.items};
-
-    // Add new item to the items
-    items[`item${Date.now()}`] = item 
-
-    // Set the new item object to state
-    this.setState({
-      items: items
-    })
+    images: {
+      image0: "/images/slider/1.jpeg",
+      image1: "/images/slider/2.jpeg",
+      image2: "/images/slider/3.jpg",
+      image3: "/images/slider/4.jpeg",
+      image4: "/images/slider/5.jpeg",
+      image5: "/images/slider/6.jpg",
+    },
   };
   render() {
     return (
       <div className="App">
-        <Menu />
-        <Inventory addItem={this.addItem} />
+        <Header />
+          <Slider images={this.state.images} />
+        <Menu cuisine={"South Indian Menu"} />
       </div>
     );
   }

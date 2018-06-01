@@ -6,67 +6,113 @@
   box-sizing: border-box;
 }
 
+body {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  /* overflow: hidden;  */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+/* App */
+
 .App {
   margin: 0;
   padding: 1% 0;
-  background: whitesmoke;
+  background-image: url(/images/bodybg.jpg);
+  background-size: cover;
+  z-index: 999;
 }
 
-.menu,
-.inventory {
-  text-align: center;
-  max-width: 100vw;
-  max-height: 100vh;
-  margin: 0;
-  padding: 1% 0;
-  background: whitesmoke;
-}
+/* Header */
 
-h2 {
-  text-align: center;
-}
-
-.main-menu {
-  height: 100vh;
+.main-header {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  flex-wrap: wrap;
+  margin-bottom: 2.5%;
+  color: whitesmoke;
 }
 
-.food-item {
-  min-width: 300px;
-  background: palegoldenrod;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px auto;
-  padding: 1% !important;
-  font-size: 1.2rem;
+.main-header .brand {
+  flex: 3;
+  text-align: center;
+  align-self: center;
 }
 
-.food-item p {
+.brand h1 {
+  font-size: 3rem;
+}
+
+.brand p {
+  font-size: 1.4rem;
+}
+
+.main-header .logo {
+  flex: 1;
+}
+
+.logo img {
+  max-height: 200px;
+}
+
+/* Slider */
+
+.slider {
+  border: 5px solid salmon;
+}
+
+.slide-img {
+  width: 100%;
+  max-height: 720px;
   margin: 0;
   padding: 0;
 }
 
-.food-item img {
-  height: 250px;
-  padding: 25px 25px;
+/* Menu */
+
+.menu {
+  text-align: center;
+  max-width: 100vw;
+  margin: 0;
+  padding: 1% 0;
+}
+
+.menu .title {
+  margin: 2.5%;
+  font-size: 2rem;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2.5% 0;
+  flex-wrap: wrap;
 }
 
 .categories {
   display: flex;
-  padding: 1% 2.5%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .category {
-  flex: 1;
-  margin: 0 2%;
+  margin: 2.5%;
+  width: 40%;
 }
 
 .category h3 {
-  margin: 20px;
+  margin: 1% auto;
 }
 
 .menu-item p {
@@ -81,19 +127,32 @@ h2 {
   justify-content: space-around;
 }
 
-.my-slides {
-  display: none;
+/* Item */
+
+.food-item {
+  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  padding: 1% !important;
+  font-size: 1.2rem;
 }
 
-.Slides {
-  display: none;
-}
-
-.mySlides {
-  display: none;
+.food-item p {
+  margin: 0;
+  padding: 0;
 }
 
 /* Inventory */
+
+.inventory {
+  text-align: center;
+  max-width: 100vw;
+  margin: 0;
+  padding: 1% 0;
+  background: whitesmoke;
+}
 
 .inventoryBtn {
   width: 200px;
@@ -110,7 +169,7 @@ h2 {
 /* AddItemForm */
 
 .item-form {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -131,35 +190,39 @@ h2 {
   margin: 0;
 }
 
-label {
+.item-form label {
   flex: 1;
   font-weight: bold;
 }
 
-input,
-select {
+.item-form input,
+.item-form select {
   flex: 5;
   border: 2px solid #999;
   padding: 1%;
   border-radius: 1%;
 }
 
-.radio-group {
+.item-form .radio-group {
   flex: 5;
-  padding: 1%;
+  justify-content: start;
   border-radius: 1%;
 }
 
-.radio-group>label {
+.item-form .radio-group>* {
+  margin: 0;
+}
+
+.item-form .radio-group>label {
   margin: 0 2.5%;
 }
 
-.btn-group {
+.item-form .btn-group {
   margin: 0 auto;
   display: flex;
 }
 
-.btn-group>button {
+.item-form .btn-group>button {
   width: 100px;
   height: 40px;
   margin: 5%;
@@ -169,4 +232,56 @@ select {
   font-weight: bold;
   line-height: 2;
   border-radius: 10px;
+}
+
+/* EditItemForm */
+
+.editItemForm {
+  background-color: navajowhite;
+  width: 80%;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 1%;
+  display: flex;
+}
+
+.editItemForm>* {
+  flex: 1;
+  margin: 0 1%;
+}
+
+.editItemForm #editRadioGrp {
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+#editRadioGrp>label {
+  margin: 0 10% 0 2.5%;
+}
+
+#editRadioGrp>input {
+  flex: 1;
+}
+
+.title {
+  margin: 1% auto;
+}
+
+.editFormBtn {
+  flex: 0.5;
+  padding: 0;
+  background-color: palegoldenrod;
+  border: 2px solid darkgoldenrod;
+  font-weight: bold;
+  line-height: 2;
+  border-radius: 10px;
+}
+
+.form-category {
+  margin: 2.5% auto;
+}
+
+.form-category h3 {
+  margin: 1% auto;
 }

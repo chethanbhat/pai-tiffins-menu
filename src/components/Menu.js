@@ -1,13 +1,15 @@
 import React from 'react';
-// import Cuisine from './Cuisine';
-// import Food from './Food';
 import Item from './Item';
-import foodItems from '../items'
+import {dosas, idlis, snacks, rice} from '../food'
 import '../App.css';
 import base from '../base'
 
 class Menu extends React.Component{
   state = {
+    dosas: {},
+    idlis: {},
+    rice: {},
+    snacks: {},
     items: {}
   };
   addItem = (item) => {
@@ -25,14 +27,19 @@ class Menu extends React.Component{
   loadSampleItems = () => {
       // Set the new item object to state
       this.setState({
-        items: foodItems
+        dosas, idlis, rice, snacks
       })
   }
   componentDidMount(){
     base.listenTo('inventory', {
       context: this,
       then(data){
-        this.setState({items: data.items});
+        this.setState({
+          dosas: data.dosas,
+          rice: data.rice,
+          snacks: data.snacks,
+          idlis: data.idlis,
+        });
       }
     })
   }
@@ -42,8 +49,28 @@ class Menu extends React.Component{
     render(){
         return (
           <div className="menu">
+            <div className="title">
+              <h1>{this.props.cuisine}</h1>
+            </div>
             <div className="main-menu">
-              {Object.keys(this.state.items).map(key => <Item key={key} details={this.state.items[key]} />)}
+              <div className="categories">
+                <div className="category">
+                  <h3>Idlis</h3>
+                  {Object.keys(this.state.idlis).map(key => <Item key={key} details={this.state.idlis[key]} />)}
+                </div>
+                <div className="category">
+                <h3>Dosas</h3>
+                  {Object.keys(this.state.dosas).map(key => <Item key={key} details={this.state.dosas[key]} />)}
+                </div>
+                <div className="category">
+                <h3>Rice</h3>
+                  {Object.keys(this.state.rice).map(key => <Item key={key} details={this.state.rice[key]} />)}
+                </div>
+                <div className="category">
+                  <h3>Snacks</h3>
+                  {Object.keys(this.state.snacks).map(key => <Item key={key} details={this.state.snacks[key]} />)}
+                </div>
+              </div>
             </div>
           </div>
         )

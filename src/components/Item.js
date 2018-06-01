@@ -5,12 +5,12 @@ class Item extends React.Component{
         console.log(`You clicked ${this.props.item}`);
     }
     render(){
-        const {name, price, status, category, cuisine} = this.props.details;
+        const {name, price, status} = this.props.details;
         if(status==="available"){
             return (
                 <div className="food-item" onClick={this.handleClick}>
                     <p>{name}</p>
-                    <p>{price}</p>
+                    <p>Rs {price}</p>
                 </div>
             )
         }
