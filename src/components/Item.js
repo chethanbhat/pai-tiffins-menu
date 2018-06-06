@@ -10,7 +10,7 @@ class Item extends React.Component{
             return (
                 <div className="food-item" onClick={this.handleClick}>
                     <p>{name}</p>
-                    <p>Rs {price}</p>
+                    <p>₹ {price}</p>
                 </div>
             )
         }

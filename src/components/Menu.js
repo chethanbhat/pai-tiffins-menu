@@ -70,6 +70,10 @@ class Menu extends React.Component{
                   <h3>Snacks</h3>
                   {Object.keys(this.state.snacks).map(key => <Item key={key} details={this.state.snacks[key]} />)}
                 </div>
+                <div className="category">
+                  <h3>Rice</h3>
+                  {Object.keys(this.state.snacks).map(key => <Item key={key} details={this.state.snacks[key]} />)}
+                </div>
               </div>
             </div>
           </div>
