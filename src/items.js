@@ -1,224 +1,315 @@
 const items = {
-    item1 : {
-        name : "Idli sambar",
-        price: "Rs 50",
+    item1: {
+        name: "Idli sambar",
+        alias: "ಇಡ್ಲಿ ಸಾಂಬರ್",
+        price: 50,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "idlis"
     },
-    item2 : {
+    item2: {
         name: "Idli Vada",
-        price: "Rs 35",
+        alias: "ಇಡ್ಲಿ ವಡಾ",
+        price: 35,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "idlis"
     },
-    
-    item3 : {
-        name: "Idli Vada Sam",
-        price: "Rs 35",
-        status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+    item3: {
+        name: "Idli Chutney",
+        alias: "ಇಡ್ಲಿ ಚಟ್ನಿ",
+        price: 35,
+        cuisine: "south indian",
+        category: "idlis"
     },
-    item4 : {
+    item4: {
         name: "Khotto/Khottige",
-        price: "Rs 35",
+        alias: "ಖೊಟ್ಟೊ / ಖೊಟ್ಟಿಗೆ",
+        price: 35,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "idlis"
     },
-    item5 : {
-        name: "Semige",
-        price: "Rs 35",
+    item5: {
+        name: "Tomato Bath",
+        alias: "ಟೊಮೇಟೊ ಬಾತ್",
+        price: 35,
         status: "unavailable",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "rice"
     },
-    item6 : {
+    item6: {
         name: "Upma",
-        price: "Rs 35",
+        alias: "ಉಪ್ಮಾ",
+        price: 35,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    
-    item7 : {
+    item7: {
         name: "Puri Bhaji",
-        price: "Rs 55",
+        alias: "ಪುರಿ ಬಾಜಿ",
+        price: 55,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item8 : {
+    item8: {
         name: "Samabar Vada",
-        price: "Rs 55",
+        alias: "ಸಂಬಾರ್ ವಡಾ",
+        price: 55,
         status: "unavailable",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    
-    item9 : {
+    item9: {
         name: "Poha",
-        price: "Rs 35",
+        alias: "ಪೊಹಾ",
+        price: 35,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item10 : {
+    item10: {
         name: "Fried Idli",
-        price: "Rs 40",
+        alias: "ಫ್ರೈಡ್ ಇಡ್ಲಿ",
+        price: 40,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "idlis"
     },
-    
-    item11 : {
+    item11: {
         name: "Dahi Vada",
-        price: "Rs 40",
+        alias: "ಧಹಿ ವಾಡಾ",
+        price: 40,
         status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item12 : {
-        name: "Fried Idli",
-        price: "Rs 40",
-        status: "available",
-        cuisine: "South Indian",
-        category: "Snacks"
-    },
-    item13 : {
+    item12: {
         name: "Plain Dosa",
-        price: "Rs 50",
+        alias: "ಸರಳ ದೋಸೆ",
+        price: 50,
         status: "available",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    item14 : {
+    item14: {
         name: "Onion Dosa",
-        price: "Rs 50",
+        alias: "ಈರುಳ್ಳಿ ದೋಸೆ",
+        price: 50,
         status: "available",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    
-    item15 : {
+    item15: {
         name: "Masala Dosa",
-        price: "Rs 65",
+        alias: "ಮಸಾಲಾ ದೋಸೆ",
+        price: 65,
         status: "available",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    
-    item16 : {
+    item16: {
         name: "Paper Dosa",
-        price: "Rs 50",
+        alias: "ಪೇಪರ್ ದೋಸೆ",
+        price: 50,
         status: "available",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    
-    item17 : {
+    item17: {
         name: "Tuppa Dosa",
-        price: "Rs 50",
+        alias: "ತುಪ್ಪ ದೋಸೆ",
+        price: 50,
         status: "available",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    
-    item18 : {
+    item18: {
         name: "Set Dosa",
-        price: "Rs 50",
+        alias: "ಸೆಟ್ ದೋಸೆ",
+        price: 50,
         status: "available",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    
-    
-    item19 : {
+    item19: {
         name: "Neer Dosa",
-        price: "Rs 50",
+        alias: "ನೀರ್ ದೋಸೆ",
+        price: 50,
         status: "unavailable",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    
-    item20 : {
+    item20: {
         name: "Rava Dosa",
-        price: "Rs 50",
+        alias: "ರವ ದೋಸೆ",
+        price: 50,
         status: "unavailable",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    item21 : {
-        name: "Onion Uthappam",
-        price: "Rs 45",
+    item21: {
+        name: "Onion Uthappa",
+        alias: "ಈರುಳ್ಳಿ ಉತ್ತಪ್ಪ",
+        price: 45,
         status: "available",
-        cuisine: "South Indian",
-        category: "Dosas"
+        cuisine: "south indian",
+        category: "dosas"
     },
-    item22 : {
-        name: "Medu Vada",
-        price: "Rs 25",
+    item22: {
+        name: "Vada",
+        alias: "ವಡಾ",
+        price: 25,
         status: "available",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item23 : {
+    item23: {
         name: "Dal Vada",
-        price: "Rs 25",
+        alias: "ದಾಲ್ ವಡಾ",
+        price: 25,
         status: "available",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item24 : {
+    item24: {
         name: "Onion Pakoda",
-        price: "Rs 30",
+        alias: "ಈರುಳ್ಳಿ ಪಕೋಡಾ",
+        price: 30,
         status: "unavailable",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item25 : {
+    item25: {
         name: "Mangalore Buns",
-        price: "Rs 15",
+        alias: "ಮಂಗಳೂರು ಬನ್ಸ್",
+        price: 15,
         status: "available",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item26 : {
+    item26: {
+
         name: "Masala Vada",
-        price: "Rs 30",
+        alias: "ಮಸಾಲಾ ವಡಾ",
+        price: 30,
         status: "unavailable",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item27 : {
+    item27: {
         name: "Biscuit Roti",
-        price: "Rs 30",
+        alias: "ಬಿಸ್ಕತ್ತು ರೊಟ್ಟಿ",
+        price: 30,
         status: "available",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item28 : {
+    item28: {
         name: "Goli Bhaje",
-        price: "Rs 30",
+        alias: "ಗೋಲಿ ಭಜೆ",
+        price: 30,
         status: "available",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item29 : {
+    item29: {
         name: "Mysore Bonda",
-        price: "Rs 30",
+        alias: "ಮೈಸೂರು ಬೋಂಡಾ",
+        price: 30,
         status: "available",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
     },
-    item30 : {
+    item30: {
         name: "Bread Bonda",
-        price: "Rs 30",
+        alias: "ಬ್ರೆಡ್ ಬೋಂಡಾ",
+        price: 30,
         status: "available",
-        cuisine: "South Indian",
-        category: "Evening Snacks"
+        cuisine: "south indian",
+        category: "snacks"
+    },
+    item31: {
+        name: "Moode",
+        alias: "ಮುಡೇ",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "idlis"
+    },
+    item32: {
+        name: "Thatte Idli",
+        alias: "ತಟ್ಟೆ ಇಡ್ಲಿ",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "idlis"
+    },
+    item33: {
+        name: "Chitranna",
+        alias:"ಚಿತ್ರಾನ್ನಾ",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "rice"
+    },
+    item34: {
+        name: "Lemon Rice",
+        alias:"ನಿಂಬೆ ಅನ್ನ",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "rice"
+    },
+    item35: {
+        name: "Puliogare",
+        alias:"ಪುಲಿಯೋಗರೆ",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "rice"
+    },
+    item36: {
+        name: "Bisi Bele Baath",
+        alias:"ಬಿಸಿಬೇಳೆ ಬಾತ್‌",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "rice"
+    },
+    item37: {
+        name: "Chow Chow Baath",
+        alias:"ಚೌಚೌ ಬಾತ್‌",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "rice"
+    },
+    item38: {
+        name: "Mini Thali",
+        alias:"ಮಿನಿ ಥಾಲಿ",
+        price: 30,
+        status: "available",
+        cuisine: "south indian",
+        category: "thali"
+    },
+    item39: {
+        name: "Regular Thali",
+        alias:"ಸಾಮಾನ್ಯ ಥಾಲಿ",
+        price: 50,
+        status: "available",
+        cuisine: "south indian",
+        category: "thali"
+    },
+    item40: {
+        name: "Deluxe Thali",
+        alias:"ಡೀಲಕ್ಸ್ ಥಾಲಿ",
+        price: 70,
+        status: "available",
+        cuisine: "south indian",
+        category: "thali"
     }
 }
 

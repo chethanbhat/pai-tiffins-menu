@@ -1,15 +1,10 @@
 import React from 'react';
 import Item from './Item';
-import {dosas, idlis, snacks, rice} from '../food'
 import '../App.css';
 import base from '../base'
 
 class Menu extends React.Component{
   state = {
-    dosas: {},
-    idlis: {},
-    rice: {},
-    snacks: {},
     items: {}
   };
   addItem = (item) => {
@@ -24,55 +19,40 @@ class Menu extends React.Component{
       items: items
     })
   };
-  loadSampleItems = () => {
-      // Set the new item object to state
-      this.setState({
-        dosas, idlis, rice, snacks
-      })
-  }
   componentDidMount(){
     base.listenTo('inventory', {
       context: this,
       then(data){
         this.setState({
-          dosas: data.dosas,
-          rice: data.rice,
-          snacks: data.snacks,
-          idlis: data.idlis,
+          items: data.items
         });
       }
     })
   }
-  componentWillUnmount(){
-    base.removeBinding(this.ref);
-  }
     render(){
         return (
           <div className="menu">
-            <div className="title">
-              <h1>{this.props.cuisine}</h1>
-            </div>
             <div className="main-menu">
               <div className="categories">
                 <div className="category">
-                  <h3>Idlis</h3>
-                  {Object.keys(this.state.idlis).map(key => <Item key={key} details={this.state.idlis[key]} />)}
+                  <h3 className="categoryTitle">Idlis</h3>
+                  {Object.keys(this.state.items).map(key => this.state.items[key].category === "idlis" ? <Item key={key} details={this.state.items[key]} /> : null)}
                 </div>
                 <div className="category">
-                <h3>Dosas</h3>
-                  {Object.keys(this.state.dosas).map(key => <Item key={key} details={this.state.dosas[key]} />)}
+                <h3 className="categoryTitle">Dosas</h3>
+                {Object.keys(this.state.items).map(key => this.state.items[key].category === "dosas" ? <Item key={key} details={this.state.items[key]} /> : null)}
                 </div>
                 <div className="category">
-                <h3>Rice</h3>
-                  {Object.keys(this.state.rice).map(key => <Item key={key} details={this.state.rice[key]} />)}
+                <h3 className="categoryTitle">Rice</h3>
+                {Object.keys(this.state.items).map(key => this.state.items[key].category === "rice" ? <Item key={key} details={this.state.items[key]} /> : null)}
                 </div>
                 <div className="category">
-                  <h3>Snacks</h3>
-                  {Object.keys(this.state.snacks).map(key => <Item key={key} details={this.state.snacks[key]} />)}
+                  <h3 className="categoryTitle">Snacks</h3>
+                  {Object.keys(this.state.items).map(key => this.state.items[key].category === "snacks" ? <Item key={key} details={this.state.items[key]} /> : null)}
                 </div>
                 <div className="category">
-                  <h3>Rice</h3>
-                  {Object.keys(this.state.snacks).map(key => <Item key={key} details={this.state.snacks[key]} />)}
+                  <h3 className="categoryTitle">Thalis</h3>
+                  {Object.keys(this.state.items).map(key => this.state.items[key].category === "thali" ? <Item key={key} details={this.state.items[key]} /> : null)}
                 </div>
               </div>
             </div>

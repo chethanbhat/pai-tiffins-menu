@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700|Raleway:600");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro:600");
+@import url("https://fonts.googleapis.com/css?family=Lato|Lustria");
 *,
 *::before,
 *::after {
@@ -7,10 +10,17 @@
   /* border: 1px solid red; */
 }
 
+:root {
+  --original-color: #ea2b1f;
+  --primary-bg-color: #ea2b1f;
+  --footer-bg-color: #6b9c07;
+}
+
 body {
-  font-size: 16px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
   color: firebrick;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -21,40 +31,104 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.combo1 > * {
+  font-family: "Raleway", sans-serif;
+}
+
+.combo1 h1,
+.combo1 h2,
+.combo1 h3,
+.combo1 h4,
+.combo1 h5,
+.combo1 h6 {
+  font-family: "Bitter", serif !important;
   font-weight: bold;
+}
+
+.combo2 > * {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+}
+
+.combo2 h1,
+.combo2 h2,
+.combo2 h3,
+.combo2 h4,
+.combo2 h5,
+.combo2 h6 {
+  font-family: "Lora", serif !important;
+  font-weight: bold;
+}
+
+.combo3 > * {
+  font-family: "Lato", sans-serif;
+}
+
+.combo3 h1,
+.combo3 h2,
+.combo3 h3,
+.combo3 h4,
+.combo3 h5,
+.combo3 h6 {
+  font-family: "Lustria", serif !important;
 }
 
 /* App */
 
 .App {
   margin: 0;
-  padding: 1% 0;
+  padding: 0;
+  padding-top: 1%;
   width: 100vw;
-  position: absolute;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+/* .App > * {
+  font-family: "Raleway", sans-serif;
+}
+
+.App h1,
+.App h2,
+.App h3,
+.App h4,
+.App h5,
+.App h6 {
+  font-family: "Bitter", serif !important;
+  font-weight: bold;
+} */
 
 /* Header */
 
 .main-header {
   display: flex;
-  margin-bottom: 2.5%;
 }
 
-.main-header .brand {
+.main-header .cuisine {
   flex: 3;
   text-align: center;
   align-self: center;
+  position: relative;
+  background-color: var(--original-color);
+  padding: 25px;
+  margin: 0 10%;
+  color: #ffffff;
+  /* clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); */
+  clip-path: polygon(10% 0, 100% 0, 100% 50%, 90% 100%, 0 100%, 0 50%);
 }
 
-.brand h1 {
-  font-size: 3rem;
+.cuisine h1 {
+  font-size: 3rem !important;
 }
 
-.brand p {
-  font-size: 1.4rem;
+.veg-mark {
+  width: 20px;
+  height: 20px;
 }
 
 .main-header .logo {
@@ -89,12 +163,6 @@ h6 {
   flex-direction: column;
 }
 
-.menu .title {
-  margin: 1% auto;
-  font-size: 2rem;
-  width: 100%;
-}
-
 .main-menu {
   width: 100%;
   display: flex;
@@ -122,7 +190,15 @@ h6 {
 
 .category {
   margin: 0;
-  padding: 0 10%;
+  padding: 2.5% 10%;
+}
+
+.categoryTitle {
+  padding: 2.5%;
+  background-color: var(--primary-bg-color);
+  color: #ffffff;
+  /* clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); */
+  clip-path: polygon(10% 0, 100% 0, 100% 50%, 90% 100%, 0 100%, 0 50%);
 }
 
 .menu-item p {
@@ -141,18 +217,18 @@ h6 {
 /* Item */
 
 .food-item {
-  min-width: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px auto;
   padding: 1% !important;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .food-item p {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 /* Inventory */
@@ -295,4 +371,20 @@ h6 {
 
 .form-category h3 {
   margin: 1% auto;
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: var(--footer-bg-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3%;
+}
+
+.main-footer .message {
+  margin: 2.5% 5%;
+  text-align: center;
 }
