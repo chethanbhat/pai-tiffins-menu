@@ -2,10 +2,16 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Menu from './Menu'
 import Inventory from './Inventory'
+import Inventory1 from './Inventory1'
+import Inventory2 from './Inventory1'
+import Inventory3 from './Inventory3'
+import Inventory4 from './Inventory4'
 import App from '../App';
-import App1 from '../App1';
-import App2 from '../App2';
-import App3 from '../App3';
+import Menu1 from '../Menu1';
+import Menu2 from '../Menu2';
+import Menu3 from '../Menu3';
+import Menu4 from '../Menu4';
+import Loader from './Loader';
 
 const Router = () => (
   <BrowserRouter>
@@ -14,9 +20,15 @@ const Router = () => (
       <Route exact path="/menu" component={Menu} />
       <Route exact path="/inventory" component={Inventory} />
       <Route exact path="/app" component={App} />
-      <Route exact path="/ex1" component={App1} />
-      <Route exact path="/ex2" component={App2} />
-      <Route exact path="/ex3" component={App3} />
+      <Route exact path="/inventory1" component={Inventory1} />
+      <Route exact path="/inventory2" component={Inventory2} />
+      <Route exact path="/inventory3" component={Inventory3} />
+      <Route exact path="/inventory4" component={Inventory4} />
+      <Route exact path="/menu1" component={Menu1} />
+      <Route exact path="/menu2" component={Menu2} />
+      <Route exact path="/menu3" component={Menu3} />
+      <Route exact path="/menu4" component={Menu4} />
+      <Route exact path="/loader" component={Loader} />
     </Switch>
   </BrowserRouter>
 )

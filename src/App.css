@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
 :root {
@@ -17,7 +16,7 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
   color: firebrick;
   margin: 0;
   padding: 0;
@@ -33,48 +32,6 @@ h6 {
   padding: 0;
 }
 
-.combo1 > * {
-  font-family: "Raleway", sans-serif;
-}
-
-.combo1 h1,
-.combo1 h2,
-.combo1 h3,
-.combo1 h4,
-.combo1 h5,
-.combo1 h6 {
-  font-family: "Bitter", serif !important;
-  font-weight: bold;
-}
-
-.combo2 > * {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-}
-
-.combo2 h1,
-.combo2 h2,
-.combo2 h3,
-.combo2 h4,
-.combo2 h5,
-.combo2 h6 {
-  font-family: "Lora", serif !important;
-  font-weight: bold;
-}
-
-.combo3 > * {
-  font-family: "Lato", sans-serif;
-}
-
-.combo3 h1,
-.combo3 h2,
-.combo3 h3,
-.combo3 h4,
-.combo3 h5,
-.combo3 h6 {
-  font-family: "Lustria", serif !important;
-}
-
 /* App */
 
 .App {
@@ -83,14 +40,15 @@ h6 {
   padding-top: 1%;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* .App > * {
-  font-family: "Raleway", sans-serif;
+.App>* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
 }
 
 .App h1,
@@ -99,9 +57,9 @@ h6 {
 .App h4,
 .App h5,
 .App h6 {
-  font-family: "Bitter", serif !important;
+  font-family: "Lora", serif !important;
   font-weight: bold;
-} */
+}
 
 /* Header */
 
@@ -118,7 +76,6 @@ h6 {
   padding: 25px;
   margin: 0 10%;
   color: #ffffff;
-  /* clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); */
   clip-path: polygon(10% 0, 100% 0, 100% 50%, 90% 100%, 0 100%, 0 50%);
 }
 
@@ -222,7 +179,7 @@ h6 {
   align-items: center;
   margin: 10px auto;
   padding: 1% !important;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .food-item p {
@@ -272,7 +229,7 @@ h6 {
   padding: 1%;
 }
 
-.form-group > * {
+.form-group>* {
   /* border: 2px solid green; */
   margin: 0;
 }
@@ -296,11 +253,11 @@ h6 {
   border-radius: 1%;
 }
 
-.item-form .radio-group > * {
+.item-form .radio-group>* {
   margin: 0;
 }
 
-.item-form .radio-group > label {
+.item-form .radio-group>label {
   margin: 0 2.5%;
 }
 
@@ -309,7 +266,7 @@ h6 {
   display: flex;
 }
 
-.item-form .btn-group > button {
+.item-form .btn-group>button {
   width: 100px;
   height: 40px;
   margin: 5%;
@@ -332,7 +289,7 @@ h6 {
   display: flex;
 }
 
-.editItemForm > * {
+.editItemForm>* {
   flex: 1;
   margin: 0 1%;
 }
@@ -343,11 +300,11 @@ h6 {
   align-items: center;
 }
 
-#editRadioGrp > label {
+#editRadioGrp>label {
   margin: 0 10% 0 2.5%;
 }
 
-#editRadioGrp > input {
+#editRadioGrp>input {
   flex: 1;
 }
 

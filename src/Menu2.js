@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header'
 import Slider from './components/Slider'
-import Menu from './components/Menu';
+import Menu from './components/Menu2';
 import Footer from './components/Footer'
 
 class App extends Component {
@@ -16,8 +16,8 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="App combo1">
-        <Header cuisine={"South Indian Menu"} />
+      <div className="App combo2">
+        <Header cuisine={"North Indian & Chinese"} />
         <Slider images={this.state.images} />
         <Menu />
         <Footer />

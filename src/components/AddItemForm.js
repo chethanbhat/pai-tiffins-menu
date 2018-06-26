@@ -6,16 +6,13 @@ class AddItemForm extends React.Component{
   createItem = (event) => {
     event.preventDefault();
     
-    const { name, alias, status, price, category, cuisine } = this.formRef;
+    const { name, status, price, category} = this.formRef;
     const item = {
       name: name.value,
-      alias: alias.value,
       price: price.value,
       status: status.value,
       category: category.value,
-      cuisine: cuisine.value
     }
-
     this.props.addItem(item);
     // Refresh the form
     this.formRef.reset();
@@ -27,10 +24,6 @@ class AddItemForm extends React.Component{
               <div className="form-group name">
                   <label>Name :</label>
                   <input name="name" type="text" placeholder="Name" />
-              </div>
-              <div className="form-group name">
-                  <label>Alias :</label>
-                  <input name="alias" type="text" placeholder="ಹೆಸರು" />
               </div>
               <div className="form-group price">
                   <label>Price (Rs) :</label>
@@ -49,26 +42,12 @@ class AddItemForm extends React.Component{
             <div className="form-group">
                 <label>Category :</label>
                 <select name="category">
-                  <option value="snacks">Snacks</option>
-                  <option value="dosas">Dosas</option>
-                  <option value="idlis">Idlis</option>
-                  <option value="rice">Rice</option>
-                  <option value="thali">Thali</option>
-                </select>  
-            </div>
-            <div className="form-group">
-                <label>Cuisine :</label>
-                <select name="cuisine">
-                  <option value="south indian">South Indian</option>
-                  <option value="north indian">North Indian</option>
-                  <option value="juice">Juice</option>
-                  <option value="dessert">Dessert</option>
-                </select>   
+                  {Object.keys(this.props.categories).map(key => <option key={key} value={key}>{this.props.categories[key]}</option> )}
+                </select>
             </div>
             <div className="form-group">
                 <div className="btn-group">
                         <button>Submit</button>
-                        <button>Reset</button>
                 </div>
             </div>
           </form>
