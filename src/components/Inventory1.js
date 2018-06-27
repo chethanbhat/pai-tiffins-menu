@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 import AddItemForm from './AddItemForm'
 import EditItemForm from './EditItemForm'
-import items from '../items';
 import base from '../base'
 
 class Inventory extends React.Component{
@@ -27,7 +26,7 @@ class Inventory extends React.Component{
   }
   addItem = (item) => {
       const list1 = {...this.state.list1};
-      const keyNum = Object.keys(items).length+2;
+      const keyNum = Object.keys(list1).length+1;
       list1[`item${keyNum}`] = item 
       this.setState({list1});
   };

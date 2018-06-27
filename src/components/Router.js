@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Menu from './Menu'
 import Inventory from './Inventory'
 import Inventory1 from './Inventory1'
-import Inventory2 from './Inventory1'
+import Inventory2 from './Inventory2'
 import Inventory3 from './Inventory3'
 import Inventory4 from './Inventory4'
 import App from '../App';
@@ -12,6 +12,7 @@ import Menu2 from '../Menu2';
 import Menu3 from '../Menu3';
 import Menu4 from '../Menu4';
 import Loader from './Loader';
+import SignUp from './SignUp';
 
 const Router = () => (
   <BrowserRouter>
@@ -29,6 +30,7 @@ const Router = () => (
       <Route exact path="/menu3" component={Menu3} />
       <Route exact path="/menu4" component={Menu4} />
       <Route exact path="/loader" component={Loader} />
+      <Route exact path="/signup" component={SignUp} />
     </Switch>
   </BrowserRouter>
 )

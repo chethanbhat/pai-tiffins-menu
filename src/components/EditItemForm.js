@@ -20,6 +20,7 @@ class EditItemForm extends React.Component{
                     <input type="radio" name="status" id="radio2" onChange={this.handleChange} value="unavailable" checked={this.props.details.status === "unavailable" ? "checked" : false} />
                     <label>Unavailable</label>
             </div>
+            {/* <input id="editCategory" name="category" type="text" placeholder="Category" onChange={this.handleChange} value={this.props.details.category} />                     */}
           </form>
         )
     }
