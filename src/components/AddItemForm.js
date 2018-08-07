@@ -23,11 +23,11 @@ class AddItemForm extends React.Component{
               <h3>Add a new item</h3>
               <div className="form-group name">
                   <label>Name :</label>
-                  <input name="name" type="text" placeholder="Name" />
+                  <input name="name" type="text" className="form-control" placeholder="Name" />
               </div>
               <div className="form-group price">
                   <label>Price (Rs) :</label>
-                  <input name="price" type="text" placeholder="20" />
+                  <input name="price" type="text" className="form-control" placeholder="20" />
              </div>
              <div className="form-group">
                 <label>Status :</label>
@@ -41,13 +41,13 @@ class AddItemForm extends React.Component{
               </div>
             <div className="form-group">
                 <label>Category :</label>
-                <select name="category">
+                <select name="category" className="form-control">
                   {Object.keys(this.props.categories).map(key => <option key={key} value={key}>{this.props.categories[key]}</option> )}
                 </select>
             </div>
             <div className="form-group">
                 <div className="btn-group">
-                        <button>Submit</button>
+                        <button className="btn btn-success">Submit</button>
                 </div>
             </div>
           </form>

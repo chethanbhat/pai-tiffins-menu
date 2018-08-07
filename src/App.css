@@ -10,9 +10,16 @@
 }
 
 :root {
-  --original-color: #ea2b1f;
+  --original-color: #791414;
   --primary-bg-color: #ea2b1f;
   --footer-bg-color: #6b9c07;
+  --menu1-color: red;
+  --menu2-color: #2a2267;
+  --menu3-color: #ff8100;
+  --menu4-color: #af7a02;
+  --menu2-body: #221963;
+  --menu3-body: #422200;
+  --menu4-body: #634708;
 }
 
 body {
@@ -40,7 +47,7 @@ h6 {
   padding-top: 1%;
   width: 100vw;
   height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,11 +79,34 @@ h6 {
   text-align: center;
   align-self: center;
   position: relative;
-  background-color: var(--original-color);
+  /* background-color: var(--original-color); */
   padding: 25px;
-  margin: 0 10%;
+  margin: 0 5% 1% 5%;
   color: #ffffff;
   clip-path: polygon(10% 0, 100% 0, 100% 50%, 90% 100%, 0 100%, 0 50%);
+}
+
+.combo1 > .main-header > .cuisine{
+  background-color: var(--original-color);
+}
+.combo2 > .main-header > .cuisine{
+  background-color: var(--menu2-color);
+}
+.combo3 > .main-header > .cuisine{
+  background-color: var(--menu3-color);
+}
+.combo4 > .main-header > .cuisine{
+  background-color: var(--menu4-color);
+}
+
+.combo2 {
+  color: var(--menu2-body);
+}
+.combo3 {
+  color: var(--menu3-body);
+}
+.combo4 {
+  color: var(--menu4-body);
 }
 
 .cuisine h1 {
@@ -124,7 +154,7 @@ h6 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 1%auto;
+  margin: 1% auto;
   padding: 0;
   flex-wrap: wrap;
 }
@@ -156,6 +186,19 @@ h6 {
   color: #ffffff;
   /* clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); */
   clip-path: polygon(10% 0, 100% 0, 100% 50%, 90% 100%, 0 100%, 0 50%);
+}
+
+.combo1 .categoryTitle {
+  background-color: var(--original-color);
+}
+.combo2 .categoryTitle {
+  background-color: var(--menu2-color);
+}
+.combo3 .categoryTitle {
+  background-color: var(--menu3-color);
+}
+.combo4 .categoryTitle {
+  background-color: var(--menu4-color);
 }
 
 .menu-item p {
@@ -194,8 +237,9 @@ h6 {
   text-align: center;
   max-width: 100vw;
   margin: 0;
-  padding: 1% 0;
-  background: whitesmoke;
+  padding: 0;
+  background: #ffffff;
+  color: #333333;
 }
 
 .inventoryBtn {
@@ -210,6 +254,14 @@ h6 {
   border-radius: 25px;
 }
 
+.inventory .menu-bar{
+  padding: 10px;
+  margin: 0;
+  background-color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* AddItemForm */
 
 .item-form {
@@ -218,8 +270,8 @@ h6 {
   flex-direction: column;
   margin: 0 auto;
   padding: 2.5%;
-  background-color: navajowhite;
-  border: 5px double black;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px #cccccc;
 }
 
 .form-group {
@@ -271,19 +323,21 @@ h6 {
   height: 40px;
   margin: 5%;
   padding: 0;
-  background-color: palegoldenrod;
-  border: 2px solid darkgoldenrod;
   font-weight: bold;
   line-height: 2;
   border-radius: 10px;
 }
 
+
+
+
 /* EditItemForm */
 
 .editItemForm {
-  background-color: navajowhite;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px #cccccc;
+  border-bottom: 1px solid #cccccc;
   width: 80%;
-  border: 1px solid black;
   margin: 0 auto;
   padding: 1%;
   display: flex;
@@ -344,4 +398,57 @@ h6 {
 .main-footer .message {
   margin: 2.5% 5%;
   text-align: center;
+}
+
+/* Inventory Page */
+
+
+/* Signup & Login Form */
+
+.login-page, .signup-page{
+  background-color: khaki;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form, .signup-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 5%;
+  background-color: #e9dd76;
+  color: #5c540b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 5px 5px #ceb903;
+}
+
+.login-form .form-group,
+.signup-form .form-group  {
+  display: flex;
+  margin: 5px;
+}
+
+.login-form .form-group input,
+.signup-form .form-group input  {
+  flex: 3;
+}
+
+.login-form .form-group label,
+.signup-form .form-group label  {
+  flex: 1;
+}
+
+.login-form .form-title,
+.signup-form .form-title {
+  align-self: center;
+  margin: 10px auto;
+}
+
+.login-form button,
+.signup-form button{
+  align-self: center;
+  margin: 10px auto;
 }

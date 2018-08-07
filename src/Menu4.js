@@ -18,7 +18,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="App combo3">
+      <div className="App combo4">
         <Header cuisine={"Chats & Continental"} />
         <Slider images={this.state.images} />
         <Menu />

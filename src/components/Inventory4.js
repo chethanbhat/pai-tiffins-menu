@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import AddItemForm from './AddItemForm'
 import EditItemForm from './EditItemForm'
-import base from '../base'
+import base, {firebaseApp} from '../base'
 
 class Inventory extends React.Component{
   state = {
@@ -41,10 +41,17 @@ class Inventory extends React.Component{
     })  
 
   };
+  signout = () => {
+    firebaseApp.auth().signOut();
+  };
   render(){
       return (
         <div className="inventory">
-          <h3 className="title">South Indian Inventory !</h3>
+          <div className="menu-bar">
+            <h3>Welcome User</h3>
+            <button className="btn btn-danger nav-btns" onClick={this.signout}>Sign Out</button>
+          </div>        
+          <h3 className="title">Chaats & Continental Inventory !</h3>
           <div className="addItemForm">
           <AddItemForm addItem={this.addItem} categories={this.categories}/>
           <h3 className="title">Edit Existing Items</h3>

@@ -12,8 +12,8 @@ class EditItemForm extends React.Component{
   render(){
         return (
           <form className="editItemForm" ref={(formRef) => {this.formRef = formRef}}>
-            <input id="editName" name="name" type="text" placeholder="Name" onChange={this.handleChange} value={this.props.details.name} />
-            <input id="editPrice" name="price" type="text" placeholder="20" onChange={this.handleChange} value={this.props.details.price} />
+            <input id="editName" name="name" type="text" className="form-control" placeholder="Name" onChange={this.handleChange} value={this.props.details.name} />
+            <input id="editPrice" name="price" type="text" className="form-control" placeholder="20" onChange={this.handleChange} value={this.props.details.price} />
             <div className="radio-group" id="editRadioGrp">
                     <input type="radio" name="status" id="radio1" onChange={this.handleChange} value="available" checked={this.props.details.status === "available" ? "checked" : false} />
                     <label>Available</label>                       
